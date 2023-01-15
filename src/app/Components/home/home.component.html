@@ -1,0 +1,14 @@
+  <!-- home -->
+  <div class="p-5 text-center bg-light" style="margin-top: 58px;">
+    <!-- InterPolation -->
+    <!-- <img src="{{ storeInfo.imgUrl }}" /> -->
+    <!-- properity binding -->
+    <img *ngIf="isImageShown" [src]="storeInfo.imgUrl" alt="" class="img-fluid" />
+    <h2 class="mb-3">{{ storeInfo.name }}</h2>
+    <p class="mb-3">lecturer: {{ storeInfo.lecturer }}</p>
+    <button type="button" class="btn btn-primary" (click)="toggleImage()" >Toggle image</button>
+    <ul>
+      <li *ngFor="let item of storeInfo.tracks">{{ item }}</li>
+    </ul>
+  </div>
+  <!-- home -->
